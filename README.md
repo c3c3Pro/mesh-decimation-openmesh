@@ -1,4 +1,4 @@
-## MeshDecimator
+# MeshDecimator
 
 A small edge-collapse mesh decimator built with CMake and OpenMesh.
 Heuristic cost = edge length × curvature (dihedral-angle based),
@@ -12,7 +12,7 @@ CMake >= 3.20
 c++ 17 compiler (MSVC/Clang/GCC)
 OpenMesh (easiest via vcpkg)
 
-## Installing vcpkg:
+# Installing vcpkg:
 For windows:
 
 cd $env:USERPROFILE
@@ -23,7 +23,7 @@ cd vcpkg
 
 With macOS/Linux:
 
-# (optional) install openmesh via vcpkg first:
+(optional) install openmesh via vcpkg first:
 git clone https://github.com/microsoft/vcpkg $HOME/vcpkg
 $HOME/vcpkg/bootstrap-vcpkg.sh
 $HOME/vcpkg/vcpkg install openmesh
@@ -48,13 +48,13 @@ cmake -S . -B build -G "Visual Studio 17 2022" -A x64 `
 cmake --build build --config Release --parallel
 ctest --test-dir build -C Release --output-on-failure
 
-## Quick Run
+# Quick Run
 use the following command to run explicitly on an example with a targeted face count:
-# For Windows (PowerShell):
+## For Windows (PowerShell):
 
 .\bin\MeshDecimator.exe .\share\mesh-decimator\Examples\armadillo.obj .\armadillo_out.obj 3000
 
-# For macOS/Linux:
+## For macOS/Linux:
 
 ./bin/MeshDecimator ./share/mesh-decimator/Examples/armadillo.obj ./armadillo_out.obj 3000
 
@@ -65,7 +65,7 @@ You can also try other .obj models for more testing
 # Command-Line usage:
 MeshDecimator <input.obj> <output.obj> [target_faces]
 
-# Defaults:
+## Defaults:
 target_faces : 3000
 preserve_boundary = true
 sharp_angle_degree = 30
@@ -89,7 +89,7 @@ share/mesh-decimator/Examples/armadillo.obj
 share/mesh-decimator/Examples/Old_Teapot.obj
 and additionally the README.md
 
-## Tests
+# Tests
 
 ctest runs two example decimations and writes results into the build directory:
 
@@ -100,7 +100,7 @@ List test:
 
 ctest --test-dir build -N
 
-## Troubleshooting:
+# Troubleshooting:
 
 CMake can't find OpenMesh : use vcpkg and pass the toolchain file, or
 set OpenMesh_DIR to the folder containing OpenMeshConfig.cmake
@@ -110,7 +110,7 @@ reconfigure from a clean build/ folder.
 
 Path issues: note that example meshes are installed under share/mesh-decimator/Examples/
 
-## Algorithm
+# Algorithm
 
 This implementation uses half-edge connectivity and repeatedly collapses the cheapest edge,
 where cost = edge length × curvature (curvature from the dihedral cosine between adjacent face 
