@@ -77,9 +77,9 @@ run:
 With macOS/Linux:
 
 # (optional) install openmesh via vcpkg first:
-# git clone https://github.com/microsoft/vcpkg $HOME/vcpkg
-# $HOME/vcpkg/bootstrap-vcpkg.sh
-# $HOME/vcpkg/vcpkg install openmesh
+git clone https://github.com/microsoft/vcpkg $HOME/vcpkg
+$HOME/vcpkg/bootstrap-vcpkg.sh
+$HOME/vcpkg/vcpkg install openmesh
 
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON \
   -DCMAKE_TOOLCHAIN_FILE="$HOME/vcpkg/scripts/buildsystems/vcpkg.cmake"
