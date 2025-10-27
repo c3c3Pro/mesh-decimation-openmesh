@@ -1,0 +1,22 @@
+# Ignore build directories
+build/
+out/
+
+# Ignore Visual Studio and CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CMakeConfigureLog.yaml
+
+# Ignore object and executable files
+*.obj
+*.exe
+*.pdb
+*.ilk
+
+# Ignore temporary or log files
+*.log
+
+# Ignore system files
+.DS_Store
+Thumbs.db
