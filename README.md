@@ -137,3 +137,6 @@ which preserves shape better than a plain midpoint. Before collapsing, we enforc
 if requested, skip “sharp” edges under a user angle threshold, and reject any collapse that would flip triangle 
 orientation or make faces degenerate (near-zero area). As a result, the surface retains features and avoids 
 artifacts while reducing faces toward the requested budget.
+For more details regarding the implementation check the following documentation (german version) : 
+[Dokumentation.pdf](https://github.com/user-attachments/files/23172689/Dokumentation.pdf)
+
